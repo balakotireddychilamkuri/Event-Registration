@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html>
+<head style="background-color: aqua;">
+  <title>Event Registration</title>
+  <script ></script>
+</head>
+<body style="background-color:rgb(100, 237, 191);" >
+  <h1>Event Registration</h1>
+  <form id="registrationForm" enctype="multipart/form-data">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" required>
+    <br>
+    <label for ="lastName" >Last Name:</label>
+    <input type="text" id="lastName" required>
+    <br>
+    <label for="email">Work Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label style="color: blueviolet;" 
+    for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" required>
+    <br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required>
+    <br>
+    <label for="gender">Gender:</label>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <br>
+    <label for="profileImage">Profile Image:</label>
+    <input type="file" id="profileImage" accept="image/*">
+    <br>
+    <label for="event">Select Event:</label>
+    <select id="event">
+      <option value="event1">Event 1 Summer Dance Party</option>
+      <option value="event2">Event 2 Beach Bash</option>
+     <option value="event3">Event 3 Pool Party</option>
+      <option value="event1">Event 4 Summer Movie Nights
+      </option>
+      <option  value="event2">Event 5 Beach Volleyball Tournament</option>
+      <option value="event3">Event 6 Farmers Markeet Festival</option>
+      <option value="event2">Event 7 Sunflower Festival</option>
+      <option value="event3">Event 8 Nature Walks</option>
+      <option value="event1">Event 9 Yoga in the Park</option>
+      <option value="event2">Event 10 Outdoor Art Show</option>
+      <option value="event3">Event 11 Family Game Night </option>
+    </select>
+    <br>
+    <button type="submit" style="color:red; background-color: aqua;">Register</button>
+  </form>
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      registerUser();
+    });
+  </script>
+</body>
+</html>
